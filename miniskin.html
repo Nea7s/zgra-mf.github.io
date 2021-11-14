@@ -1,0 +1,75 @@
+<meta charset="utf-8">
+<title>4D スキン適応方法</title>
+<body bgcolor="#f0f8ff" text="文字色と位置ずらす" style="padding-left: 40px;"></body>
+<link rel="stylesheet" href="1.css">
+
+<script>
+    function copy()
+    {
+        var text1 = document.getElementById("storage").value;
+        navigator.clipboard.writeText(text1);
+        alert("コピーしました");
+    }
+</script>
+
+<h1 style="text-align: center; color: rgba(107, 24, 175, 0.575);">ミニスキン適応方法</h1><hr>
+
+<br><div class="aw">
+    <h2>目次</h2>
+    <a href="#1"><h3>前提準備(設定等)</h3></a>
+    <a href="#2"><h3>MCLancher で入れる</h3></a>
+    <a href="#3"><h3>スキンファイル を置き換える</h3></a>
+    <a href="#4"><h3>適応する (起動する)</h3></a>
+    <a href="./FAQ.html"><h3>エラー､スキンが変更できない場合の対処</h3></a>
+</div>
+
+
+<br><br><p id="1" style="color: cadetblue; font-size:150%; border-left: 5px solid #e2001b;">前提準備</p>
+
+<p><li>Windows10の開発者モードをOnにしてください｡しないと起動時にエラーになります</li></p>
+
+<details style="padding-left: 2%;">
+    <summary><u>ここを押すと画像を表示</u></summary>
+    <img src="./img/kaihatsu.png" class="imgg">
+</details>
+
+<br><br><p><li>マイクラのデータ(テクスチャ等)のバックアップを取っておく</li></p>
+<p style="color: brown;">※データが消えたりおかしくなっても自己責任でお願いします</p>
+<p>マイクラのディレクトリ <button onclick="copy()">コピーする</button><input type="text" id="storage" value="%LocalAppData%\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\LocalState\games\com.mojang\" style="width: 50%;"></p>
+
+<br><p><li>4D skinなど適応したスキンファイル</li></p>
+<p>Download ､自作など､人によって環境が変わるのであまり詳しくは説明しません</p>
+
+
+<br><br><p id="2" style="color: cadetblue; font-size:150%; border-left: 5px solid #e2001b;">MCLancher で入れる</p>
+<p><a href="https://github.com/MCMrARM/mc-w10-version-launcher/releases">MCLancher</a> をDLします｡IObit より簡単だと個人的に思っています｡(適応するのが)</p>
+<button onclick="location.href='https://github.com/MCMrARM/mc-w10-version-launcher/releases/download/0.2.1/MCLauncher.zip'">MCLancher Download</button>
+
+<br><br><p>DLしたら起動して､自分の導入したいバージョンの横にある､ [ Download ] を押してファイルをダウンロードしてください
+    <details style="padding-left: 2%;">
+        <summary><u>ここを押すと画像を表示</u></summary>
+        <img src="./img/MCLancher.png" class="imgg">
+    </details>
+<p style="color: brown;">※Beta版を使う予定がない場合､下にある Show beta version のチェックを外すことをオススメします｡(そっちの方が少なくて見つけやすいです)</p>
+
+
+<br><br><p id="3" style="color: cadetblue; font-size:150%; border-left: 5px solid #e2001b;">スキンファイル を置き換える</p>
+<p>MCLancher で指定のバージョンのファイルをDL出来たら､スキンファイルを置き換えていきます</p>
+<p style="color: brown;">※Persona フォルダで置き換えることをオススメします</p>
+<br><p>ディレクトリは MCLancher と同じフォルダに DLされています ( 例  : Minecraft-1.17.11.1 )</p>
+<p>その下にある <input type="text" value="\Minecraft-1.17.11.1\data\skin_packs\" style="width: 16%;"></input> がスキンファイルが置いてある場所です｡ (ここを置き換えれば適応出来ます)
+    <details style="padding-left: 2%;">
+        <summary><u>ここを押すと画像を表示</u></summary>
+        <img src="./img/storage_skin.png" class="imgg">
+    </details>
+
+<br><br><p id="4" style="color: cadetblue; font-size:150%; border-left: 5px solid #e2001b;">適応 (起動する)</p>
+<p>上記のことが完全に出来たら MCLancher から Download したバージョンの横に [ Launch ] があると思うのでそれを押せば起動出来ます</p>
+<details style="padding-left: 2%;">
+    <summary><u>ここを押すと画像を表示</u></summary>
+    <img src="./img/MCLancher1.png" height="60%" width="60%">
+</details>
+
+<br><p>起動してスキンが適応出来たら終了です｡お疲れさまでした</p>
+
+<br><a href="./FAQ.html" style="font-size: 150%;">エラー､スキンが変更できない場合の対処</a>

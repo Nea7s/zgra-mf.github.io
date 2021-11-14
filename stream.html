@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+</head>
+<link rel="stylesheet" href="2.css">
+
+
+<title>スマホ撮影(obs)</title>
+<h1 style="text-align: center;">スマホの画面をOBSで録画する</h1>
+<br>
+
+
+<div
+    style="padding: 10px; margin-bottom: 10px; border: 1px solid #333333; background-color: whitesmoke; text-align: center;">
+    <h2>目次</h2>
+    <h3><a href="#1">1. ストリープアプリを入れる</a></h3>
+    <h3><a href="#2">2. OBSで追加する</a></h3>
+</div>
+
+<br><hr style="visibility: hidden; height: 10em;"><hr>
+
+<p style="font-size: 200%;" id="1">1. ストリームアプリを入れる</p>
+<p style="color: cornflowerblue;">スマホにストリームアプリを入れる</p>
+<br>
+
+<p>私が使用してるのは Screen Stream over HTTP です</p>
+<a href="https://play.google.com/store/apps/details?id=info.dvkr.screenstream">Screen Stream over HTTP (リンク)</a>
+<br>
+
+
+<br><hr style="visibility: hidden; height: 4em;">
+<p>インストールしたら設定します</p>
+
+<details style="padding-left: 2%;">
+    <summary><u>ここを押すと画像を表示</u></summary>
+    <img src="img/screen/Screenshot_20211024-164800.png">
+</details>
+
+<p>※端末のアドレス を覚えておいてください。後でOBSで使います</p>
+
+<br><p style="color: brown;">インターフェース</p>
+
+<details style="padding-left: 2%;">
+    <summary><u>ここを押すと画像を表示</u></summary>
+    <img src="img/screen/Screenshot_20211024-164804.png">
+</details>
+
+<p>遅い接続を通知する は offをオススメします</p>
+<p>Webページのボタンを有効化 は off をオススメします</p>
+
+<br><p style="color: brown;">画像</p>
+<details style="padding-left: 2%;">
+    <summary><u>ここを押すと画像を表示</u></summary>
+    <img src="img/screen/Screenshot_20211024-164809.png">
+</details>
+<p>FPSリミット は ハイスペックでない限り、30前後をおすすめします</p>
+<p>JPEG圧縮の品質 も上記同様、80前後をおすすめします (私は60にしてます)</p>
+
+<br>
+<br><hr style="visibility: hidden; height: 7em;">
+<p>設定が済んだら、画面下の真ん中にある 開始 のボタンを押して</p>
+<p>ストリームを開始できます。</p>
+
+<br><hr style="visibility: hidden; height: 10em;"><hr>
+
+<p style="font-size: 200%;" id="2">2. OBSで追加する</p>
+<p style="color: cornflowerblue;">スマホでストリームしている映像を拾います</p>
+<br>
+
+<br>
+<p>OBSのシーンで ソースの追加 -> ブラウザ (上から5番目あたり) で追加します</p>
+<img src="img/screen/1.jpg">
+
+<br>
+<p>URL : http://(ここにスマホのip):(ストリームしているport)/stream.mjpeg</p>
+<p style="color: blue;">私の場合 http://192.168.1.30:8080/stream.mjpeg</p>
+<br>
+<p style="color: crimson;">※幅、高さはスマホによって変えたほうが良い場合があります (stream.mjpeg のサイズを確認したら分かります)</p>
+<p style="color: crimson;">※下記の幅、高さは横画面用です。縦画面はサイズを変更することをおすすめします</p>
+<p>幅 : 1280</p>
+<p>高さ : 540</p>
+
+<br>
+<p style="color: darkcyan;">これで映せれば完了です。 画面の比率やサイズがおかしい場合</p>
+<p style="color: darkcyan;">ブラウザを選択して 再読み込み すれば直る場合があります</p>
+<p style="color: darkcyan;">再読み込み は フィルタ の横にあります</p>

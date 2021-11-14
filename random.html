@@ -1,0 +1,24 @@
+<h1>ランダムリスト</h1>
+<textarea id="textarea3" value="1" cols="30" rows="30" maxlength="30"></textarea>
+<input type="button" value="ランダム" onclick="clickBtn5()">
+<h1>結果</h1>
+<div id="rest"></div>
+
+<script>
+
+    //取得からのランダム出力
+    function clickBtn5() {
+
+        //取得
+        var ta3 = document.getElementById("textarea3").value;
+        var list  = ta3.split('\n');
+
+        //ランダム
+        var random = list[Math.floor(Math.random() * list.length)];
+
+        document.getElementById("rest").innerHTML = "結果 : "+random;
+
+        console.log(random);
+    }
+
+</script>
