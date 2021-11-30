@@ -11,6 +11,7 @@
         font-size: 120%;
     }
 
+
     body {
         text-align: center;
         padding-top: 90px;
@@ -55,7 +56,7 @@
         background: #FF0505;
         text-align: center;
         color: #FFFFFF;
-        font-size: 20px;
+        font-size: 17px;
         font-weight: bold;
         -webkit-border-radius: 15px;
     }
@@ -72,8 +73,12 @@
 <header>
     <nav class="gnav">
         <ul class="menu">
-            <li><a target="_blank" href="https://discord.com/api/oauth2/authorize?client_id=766289629253992458&permissions=3394560&scope=bot">サーバーに追加</a></li>
-            <li><a href="command.html">コマンド一覧</a></li>
+            <li><a target="_blank"
+                    href="https://discord.com/api/oauth2/authorize?client_id=766289629253992458&permissions=3394560&scope=bot">サーバーに追加</a>
+            </li>
+            <li><a href="#come">コマンド一覧</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="index.html">ホームに戻る</a></li>
         </ul>
     </nav>
 </header>
@@ -81,11 +86,111 @@
 <body bgcolor="#8490C8">
     <img src="https://cdn.discordapp.com/avatars/766289629253992458/c95fc6abc9b0bd04350a2941b2b6a2b0.png?size=160"
         style="display: block; margin: auto;">
-    <h1 style="color: red;">にゃーの bot</h2>
-        <p><span style="color: yellowgreen;">Megamon Games Discord【公式】</span> のDiscordサーバーを中心として、開発されています。</p>
-        <p><span style="color:powderblue;">テキストチャンネル読み上げ、音楽再生 </span>など付いています</p>
+    <h1 style="color: rgb(255, 9, 9);">にゃーの bot</h2>
+        <p><span style="color: rgb(186, 255, 49);">Megamon Games Discord【公式】</span> のDiscordサーバーを中心として、開発されています。</p>
+        <p><span style="color:rgb(14, 227, 255);">テキストチャンネル読み上げ、音楽再生 </span>など付いています</p>
         <p>上にある <span style="color: #FFFFFF;">[ コマンド一覧 ]</span> からコマンドを確認することができます。(準備中)</p>
         <div class='btn'>
-            <a target="_blank" href='https://discord.com/api/oauth2/authorize?client_id=766289629253992458&permissions=3394560&scope=bot' style="display: inline-block;">自分のサーバーに追加</a>
+            <a target="_blank"
+                href='https://discord.com/api/oauth2/authorize?client_id=766289629253992458&permissions=3394560&scope=bot'
+                style="display: inline-block;">自分のサーバーに追加</a>
         </div>
+
+        <br style="line-height: 150px;">
+
+        <hr>
+        <p id="come" style="color:rgb(232, 210, 255);">コマンド一覧</p>
+        <br>
+        <h2 style="color:rgb(98, 55, 255);"></h2>
+        <p>グループ導入時は <span style="color:rgb(182, 231, 250);">!help</span> で確認できます。</p>
+        <table border="1" style="margin: auto; color:rgb(40, 40, 184);">
+            <tr>
+                <th>コマンド</th>
+                <th>説明</th>
+                <th>補足</th>
+            </tr>
+            <tr>
+                <th>!changepre [sss]</th>
+                <th>[sss] をそのサーバーのPrefixにします。</th>
+                <th>Prefix : コマンドの最初。</th>
+            </tr>
+            <tr>
+                <th>!ping</th>
+                <th>Pingが確認できます。</th>
+            </tr>
+            <tr>
+                <th>!word</th>
+                <th>どうぶつ動画字幕bot のツイートをランダムに送信します</th>
+                <th>※ワードを修正していないので注意</th>
+            </tr>
+            <tr>
+                <th>!tts</th>
+                <th>テキストチャンネルの内容を、ボイスチャンネルで読み上げます。</th>
+                <th>!tts on で送信したチャンネルのみ、ボイスチャンネルで読み上げます。 (初期 : グループ全体読み上げ)</th>
+            </tr>
+            <tr>
+                <th>!play [Youtube]</th>
+                <th>[Youtube] のurl の音声を、ボイスチャンネルで読み上げます。</th>
+                <th>[Youtube] がurlでなければ、題名として検索して再生します。</th>
+            </tr>
+            <tr>
+                <th>!loop [Num]</th>
+                <th>[Num]によって音楽再生のみループが1=有効。0=無効</th>
+                <th>音楽再生中なら1でループ。0で無効に出来ます。</th>
+            </tr>
+            <tr>
+                <th>!stop</th>
+                <th>再生中の音声をストップします。</th>
+                <th>音楽も読み上げも止まります。</th>
+            </tr>
+            <tr>
+                <th>!leave</th>
+                <th>ボイスチャンネルからにゃーのが抜けます。</th>
+                <th>にゃーの のみになったら勝手に抜けます。</th>
+            </tr>
+            <tr>
+                <th>!Mset [Mem] [MID]</th>
+                <th>マイクラのID (MID) とDiscord [Mem]を連携出来ます。</th>
+                <th rowspan="2">[Mem] : Discordのユーザーをメンション<br>[MID] : マイクラのID</th>
+            </tr>
+            <tr>
+                <th>!MM [Mem] or [MID]</th>
+                <th>メンションもしくはマイクラIDを入れると、マーダーミステリーの戦歴を確認できます。</th>
+            </tr>
+        </table>
+
+
+        <br style="line-height: 100px;">
+        <hr>
+        <p id="about" style="color:rgb(0, 4, 255);">About</p>
+        <table border="1" style="margin: auto; color:rgb(252, 252, 252);">
+            <tr>
+                <th>にゃーの作成</th>
+                <th rowspan="2">あやけい</th>
+            </tr>
+            <tr>
+                <th>サイト作成</th>
+            </tr>
+            <tr>
+                <th>作成環境</th>
+                <th rowspan="2">Android 10 & Windows 10</th>
+            </tr>
+            <tr>
+                <th>デバック環境</th>
+            </tr>
+            <tr>
+                <th>使用モジュール</th>
+                <th>Nextcord.py</th>
+            </tr>
+            <tr>
+                <th>作成期間</th>
+                <th>約4ヶ月</th>
+            </tr>
+            <tr>
+                <th>世代</th>
+                <th>2世代目 (1ヶ月前)</th>
+            </tr>
+
+        </table>
+
 </body>
