@@ -103,7 +103,8 @@
         <br>
         <h2 style="color:rgb(98, 55, 255);"></h2>
         <p>グループ導入時は <span style="color:rgb(182, 231, 250);">!help</span> で確認できます。</p>
-        <p>[] は前に 半角の空白 を入れて入力してください。</p>
+        <p>[] の
+            前には 半角の空白 を入力してください。</p>
         <table border="1" style="margin: auto; color:rgb(40, 40, 184);">
             <tr>
                 <th>コマンド</th>
@@ -121,11 +122,6 @@
                 <th></th>
             </tr>
             <tr>
-                <th>!word</th>
-                <th>どうぶつ動画字幕bot のツイートをランダム送信</th>
-                <th>※ワードを修正していないので注意</th>
-            </tr>
-            <tr>
                 <th>!tts []</th>
                 <th>テキストルームの内容を、通話ルームで読み上げます</th>
                 <th>[] : on 一定ルームのみ読み上げ</th>
@@ -136,9 +132,9 @@
                 <th>[Youtube] : つべのURL or 題名</th>
             </tr>
             <tr>
-                <th>!loop [Num]</th>
-                <th>[Num]によって音楽再生のみループ</th>
-                <th>[Nun] : 1 ループ。0: ループ無効</th>
+                <th>!loop</th>
+                <th>1回送るとループが有効になります</th>
+                <th>もう1度送るとループを無効化出来ます</th>
             </tr>
             <tr>
                 <th>!stop</th>
@@ -173,6 +169,30 @@
                 <th>!wiki [Word]</th>
                 <th>ウィキペディアで [Word] を検索</th>
                 <th>単語が完全一致でないと不可</th>
+            </tr>
+        </table>
+
+        <h2 style="color: aqua;">鯖主用コマンド</h2>
+        <table border="1" style="margin: auto; color:rgb(57, 57, 255);">
+            <tr>
+                <th>コマンド</th>
+                <th>説明</th>
+                <th>補足</th>
+            </tr>
+            <tr>
+                <th>!block [Mem]</th>
+                <th>[Mem] をブロックする</th>
+                <th>ブロックされるとコマンドが使用不可になります</th>
+            </tr>
+            <tr>
+                <th>!unblock [Mem]</th>
+                <th>[Mem] をブロック解除する</th>
+                <th>ブロックを解除します</th>
+            </tr>
+            <tr>
+                <th>!isblock [Mem]</th>
+                <th>[Mem] がブロックされたか確認</th>
+                <th></th>
             </tr>
         </table>
 
