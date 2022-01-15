@@ -1,95 +1,37 @@
-@charset "UTF-8";
-
-img {
-  width : 25vw ;
-  height : 18vw ;
-}
-.imgg {
-  max-width: 80%;
-  width: 60%;
-  height: auto;
-}
-
 body {
-  padding-top: 90px; /* ヘッダーの後ろに要素が隠れないようにするため */
+    background-color: #f0f8ff;
 }
 
-header {
-  width: 100%; /* 幅いっぱいを指定 */
-  height: 50px; /* 高さを50pxに指定 */
-  background: #CCC; /* 背景色にグレーを指定 */
-  padding: 20px 50px; /* ヘッダーに上下左右それぞれ余白を指定 */
-  box-sizing: border-box; /* padding分を含んで幅を100%にするため */
-  position: fixed; /* ウィンドウを基準に画面に固定 */
-  top: 0; /* 上下の固定位置を上から0pxにする */
-  left: 0; /* 左右の固定位置を左から0pxにする */
-  display: flex; /* 中の要素を横並びにする */
-  align-items: center; /* 中の要素を上下中央に並べる */
+.list {
+    --size: 150px;
 }
 
-header .gnav .menu {
-  display: flex; /* 中の要素を横並びにする */
+.list>a {
+    display: inline-block;
+    width: var(--size);
+    margin: 2px;
 }
 
-header .gnav .menu li {
-  list-style: none; /* リストの[・]を消す */
+.list>a::before {
+    content: "";
+    display: block;
+    height: var(--size);
+    background: var(--col, #0000) no-repeat center/cover var(--img, url(img/nya-no.png));
 }
 
-header .gnav .menu li + li {
-  margin-left: 40px; /* メニューそれぞれに間隔をあけるため */
+h1 {
+    color: turquoise;
 }
 
-main {
-  height: 100vw; /* スクロールの演出を見れるようにmainに高さを指定 */
-}
-
-
-
-h2 {
-    color:orange;
-}
-
-a {
-  text-decoration:none; 
-}
-
-
-span.rescolor {
-  color:royalblue;
-}
-
-p.lasted {
-  color: cornflowerblue;
-}
-
-
-.box1 section{
-  margin: 10px;
-  border-radius: 5px;
-  background: #81c7e2;
-  padding: 15px;
-}
-
-.box1 img {
-  margin-right:6px;
-	vertical-align: middle;
-}
-
-.box1 .narabi{
-  display: inline-block;
-  vertical-align: middle;
-}
-
-.box section {
+hr {
+    border-top: 1px solid #ccc;
     margin: 10px;
-    border-radius: 5px;
-    background: #F5F0CF;
-    padding: 15px;
-  }
-  .box h1 {
-    color: #E6AC27;
-    font-size: 1.5rem;
-  }
-  .box p {
-    margin-top: 10px;
-  }
+}
+
+span{
+    color:royalblue;
+}
+
+p{
+    margin:auto;
+}

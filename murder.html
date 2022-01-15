@@ -1,0 +1,105 @@
+<meta charset="utf-8">
+<title>MM API</title>
+
+<link rel="stylesheet" href="1.css">
+
+
+<h1>MM API</h1>
+<form name="form" action="murder.html" method="get">
+    <input type="text" name="MMID" placeholder="マイクラ ID">
+    <input type="submit" value="取得">
+    <hr>
+</form>
+
+
+<p>UUID : <span id="UUID">00000000-0000-0000-0000-000000000000</span></p>
+<p>初プレイ日 : <span id="first_played">2000/00/00 00:00:00</span></p>
+<br>
+<p>レベル : <span id="LV">0</span></p>
+<p>次のレベルまで <span id="NXP">0</span>XP必要</p>
+<br>
+<p>経験値 : <span id="xp">0</span></p>
+<p>プレイ回数 : <span id="played">0</span></p>
+<p>勝利数 : <span id="victories">0</span></p>
+<p>コイン数 : <span id="coins">0</span></p>
+<p>殺人数 : <span id="murders">0</span></p>
+<p>死亡数 : <span id="deaths">0</span></p>
+<p>退治数 : <span id="murderer_eliminations">0</span></p>
+<br>
+<p>uncapped_xp : <span id="uncapped_xp">0</span></p>
+
+
+<script>
+    //ロード時
+    window.onload = function () {
+        let params = (new URL(document.location)).searchParams;
+        let MMID = params.get('MMID');
+        if (MMID) {
+            Api_get(MMID);
+            form.MMID.value = MMID;
+        }
+    }
+
+    //APIのヘッダー
+    const hives = {
+        "accept": "*/*",
+        "x-csrf-token": ""
+    }
+
+    //結果を代入
+    function Set_value(MM_json) {
+        //初プレイ計算
+        let times = formats(MM_json["first_played"]);
+        document.getElementById("first_played").textContent = times;
+        delete MM_json.first_played;
+        Set_LV(MM_json["xp"]);
+        for (let i in MM_json) {
+            document.getElementById(i).textContent = MM_json[i];
+        }
+    }
+
+    //時間整形
+    function formats(dts) {
+        let dt = new Date(dts * 1000);
+        let y = dt.getFullYear();
+        let m = ('00' + (dt.getMonth() + 1)).slice(-2);
+        let d = ('00' + dt.getDate()).slice(-2);
+        let h = ('00' + dt.getHours()).slice(-2);
+        let mu = ('00' + dt.getMinutes()).slice(-2);
+        let s = ('00' + dt.getSeconds()).slice(-2);
+        return y+'/'+m+'/'+d+' '+h+":"+mu+":"+s;
+    }
+
+    //GetAPI
+    function Api_get(MMID) {
+        fetch("https://api.playhive.com/v0/game/all/murder/" + MMID, headers = hives)
+            .then(response => response.json()).then(texts => Set_value(texts))
+            .catch(error => {
+                if (error == "SyntaxError: Unexpected token < in JSON at position 0") {
+                    alert('エラーが発生したよ!: アカウントが存在しない可能性があります');
+                }
+            });
+    }
+
+
+    //レベル計算
+    function Set_LV(xps) {
+        let xp1 = xp2 = 0;
+        for (let i = 1; i < 101; i++) {
+            if (i <= 81) {
+                xp1 += (i - 1) * 100;
+                xp2 += i * 100;
+            }
+            else {
+                xp1 += 8100;
+                xp2 = xp1 + 8100;
+            }
+            if (xp1 <= xps && xps <= xp2) {
+                document.getElementById("LV").textContent = i + 1;
+                document.getElementById("NXP").textContent = xp2 - xps;
+                break;
+            }
+        }
+    }
+</script>
+</body>
