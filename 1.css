@@ -28,10 +28,18 @@ hr {
     margin: 10px;
 }
 
-span{
-    color:royalblue;
+span {
+    color: royalblue;
 }
 
-p{
-    margin:auto;
+p {
+    margin: auto;
+}
+
+.error {
+    background-color: #e0dddd;
+    border: 1px solid #afadad;
+    margin: 0em 0em;
+    padding: 1em;
+    width: 25%;
 }
