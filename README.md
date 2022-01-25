@@ -1,4 +1,4 @@
-# nya-no.github.io
-あやけいのサイト
+# szcjp.github.io
+ぜぎりあのサイト
 
-https://nya-no.github.io/
+https://szcjp.github.io/
