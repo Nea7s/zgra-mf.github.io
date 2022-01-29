@@ -84,11 +84,12 @@
     <br style="line-height: 150px;">
 
     <hr>
-    <p">コマンド一覧</p>
+    <p id="commands">コマンド一覧</p>
         <br>
         <p>グループ導入時は !help で確認できます。</p>
         <p>[] の
             前には 半角の空白 を入力してください。</p>
+        <p>※ が付いてるのは準備中です</p>
         <table border="1">
             <tr>
                 <th>コマンド</th>
@@ -126,12 +127,7 @@
                 <th></th>
             </tr>
             <tr>
-                <th>!vinfo</th>
-                <th>接続済みの通話ルームのメンバー取得します</th>
-                <th>接続しないと結果が出ません</th>
-            </tr>
-            <tr>
-                <th>!vrandom [Nun] [Not]</th>
+                <th>※ !vrandom [Nun] [Not]</th>
                 <th>接続済みの通話ルームからチーム分け</th>
                 <th>[Nun] : チーム人数<br>[Not] : 除外する人の名前 (任意)</th>
             </tr>
@@ -141,18 +137,9 @@
                 <th>にゃーの 1人なら勝手に抜けます</th>
             </tr>
             <tr>
-                <th>!Mset [Mem] [MID]</th>
-                <th>マイクラのID (MID) とDiscord [Mem] を連携</th>
-                <th rowspan="2">[Mem] : Discordでメンション<br>[MID] : マイクラのID</th>
-            </tr>
-            <tr>
-                <th>!MM [M]</th>
-                <th>[M] のマーダーミステリーの戦歴を確認できます</th>
-            </tr>
-            <tr>
-                <th>!wiki [Word]</th>
-                <th>ウィキペディアで [Word] を検索</th>
-                <th>単語が完全一致でないと不可</th>
+                <th>!MM [MMID]</th>
+                <th>[MMID] のマーダーミステリーの戦歴を確認できます</th>
+                <th>[MMID] : マイクラのID</th>
             </tr>
         </table>
 
@@ -166,17 +153,15 @@
             <tr>
                 <th>!block [Mem]</th>
                 <th>[Mem] をブロックする</th>
-                <th>ブロックされるとコマンドが使用不可になります</th>
+                <th rowspan="3">[Mem] : ユーザーメンション、ユーザーIDに対応</th>
             </tr>
             <tr>
                 <th>!unblock [Mem]</th>
                 <th>[Mem] をブロック解除する</th>
-                <th>ブロックを解除します</th>
             </tr>
             <tr>
-                <th>!isblock [Mem]</th>
-                <th>[Mem] がブロックされたか確認</th>
-                <th></th>
+                <th>!blocklist [Mem]</th>
+                <th>ブロックリストを表示 (ユーザーID)</th>
             </tr>
         </table>
 
@@ -187,7 +172,7 @@
         <table border="1">
             <tr>
                 <th>にゃーの作成</th>
-                <th rowspan="2">あやけい</th>
+                <th rowspan="2">ぜぎりあ (あやけい)</th>
             </tr>
             <tr>
                 <th>サイト作成</th>
@@ -205,11 +190,11 @@
             </tr>
             <tr>
                 <th>作成期間</th>
-                <th>約4ヶ月</th>
+                <th>約6ヶ月</th>
             </tr>
             <tr>
                 <th>世代</th>
-                <th>2世代目 (3ヶ月前)</th>
+                <th>3世代目 (1ヶ月前)</th>
             </tr>
 
         </table>
