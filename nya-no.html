@@ -76,125 +76,119 @@
 </header>
 
 <img src="img/nya-no.png" style="display: block; margin: auto;">
-<h1 style="color: rgb(255, 9, 9);">にゃーの bot</h2>
+<h1 style="color: rgb(0, 255, 115);">にゃーの bot</h2>
     <div class='btn'>
-        <a target="_blank" href='https://is.gd/Gbcb2O' style="display: inline-block;">自分のサーバーに追加</a>
+        <a target="_blank" href='https://is.gd/Gbcb2O' style="display: inline-block;">サーバーに追加</a>
     </div>
 
     <br style="line-height: 150px;">
 
     <hr>
     <p id="commands">コマンド一覧</p>
-        <br>
-        <p>グループ導入時は !help で確認できます。</p>
-        <p>[] の
-            前には 半角の空白 を入力してください。</p>
-        <p>※ が付いてるのは準備中です</p>
-        <table border="1">
-            <tr>
-                <th>コマンド</th>
-                <th>説明</th>
-                <th>補足</th>
-            </tr>
-            <tr>
-                <th>!changepre [Sss]</th>
-                <th>[Sss] をそのサーバーのPrefixに変更</th>
-                <th>Prefix : コマンドの最初</th>
-            </tr>
-            <tr>
-                <th>!ping</th>
-                <th>Pingを確認</th>
-                <th></th>
-            </tr>
-            <tr>
-                <th>!tts []</th>
-                <th>テキストルームの内容を、通話ルームで読み上げます</th>
-                <th>[] : on 一定ルームのみ読み上げ</th>
-            </tr>
-            <tr>
-                <th>!play [Youtube]</th>
-                <th>[Youtube] を、ボイスチャンネルで読み上げます</th>
-                <th>[Youtube] : つべのURL or 題名</th>
-            </tr>
-            <tr>
-                <th>!loop</th>
-                <th>1回送るとループが有効になります</th>
-                <th>もう1度送るとループを無効化出来ます</th>
-            </tr>
-            <tr>
-                <th>!stop</th>
-                <th>再生中の音声をストップします</th>
-                <th></th>
-            </tr>
-            <tr>
-                <th>※ !vrandom [Nun] [Not]</th>
-                <th>接続済みの通話ルームからチーム分け</th>
-                <th>[Nun] : チーム人数<br>[Not] : 除外する人の名前 (任意)</th>
-            </tr>
-            <tr>
-                <th>!leave</th>
-                <th>ボイスチャンネルからにゃーのが抜けます</th>
-                <th>にゃーの 1人なら勝手に抜けます</th>
-            </tr>
-            <tr>
-                <th>!MM [MMID]</th>
-                <th>[MMID] のマーダーミステリーの戦歴を確認できます</th>
-                <th>[MMID] : マイクラのID</th>
-            </tr>
-        </table>
-
-        <h2 style="color: rgb(255, 0, 0);">鯖主用コマンド</h2>
-        <table border="1">
-            <tr>
-                <th>コマンド</th>
-                <th>説明</th>
-                <th>補足</th>
-            </tr>
-            <tr>
-                <th>!block [Mem]</th>
-                <th>[Mem] をブロックする</th>
-                <th rowspan="3">[Mem] : ユーザーメンション、ユーザーIDに対応</th>
-            </tr>
-            <tr>
-                <th>!unblock [Mem]</th>
-                <th>[Mem] をブロック解除する</th>
-            </tr>
-            <tr>
-                <th>!blocklist [Mem]</th>
-                <th>ブロックリストを表示 (ユーザーID)</th>
-            </tr>
-        </table>
+    <br>
+    <p>[] の
+        前には 半角の空白 を入力してください。</p>
+    <table border="1">
+        <tr>
+            <th>コマンド</th>
+            <th>説明</th>
+            <th>補足</th>
+        </tr>
+        <tr>
+            <th>※ のは準備中です</th>
+            <th colspan="2">
+                <p style="color: #5005ff;">通常コマンド
+            </th>
+        </tr>
+        <tr>
+            <th>!changepre [Sss]</th>
+            <th>[Sss] をサーバーのPrefixに変更</th>
+            <th>Prefix : 文字の最初 (数文字指定可能)</th>
+        </tr>
+        <tr>
+            <th>!tts [op]</th>
+            <th>テキストルームの内容を、通話ルームで読み上げます</th>
+            <th>[op] : on を指定した場合<br>一定ルームのみ読み上げ</th>
+        </tr>
+        <tr>
+            <th>!play [YT]</th>
+            <th>[YT] を、ボイスチャンネルで読み上げます</th>
+            <th>[YT] : つべのURL、タイトル</th>
+        </tr>
+        <tr>
+            <th>!loop</th>
+            <th>1回送信でループが有効になります</th>
+            <th>再度送ると ループが無効になります</th>
+        </tr>
+        <tr>
+            <th>!stop</th>
+            <th>再生をストップします</th>
+            <th>読み上げ､曲など</th>
+        </tr>
+        <tr>
+            <th>※ !team [Nun] [Not]</th>
+            <th>通話のルームメンバーをチーム分け</th>
+            <th>[Nun] : チーム人数<br>[Not] : 除外する人の名前 (任意)<br>[Not] は空白で増加可能</th>
+        </tr>
+        <tr>
+            <th>!leave</th>
+            <th>ボイスチャンネルからにゃーのが抜けます</th>
+            <th>※ 自動退出機能があります</th>
+        </tr>
+        <tr>
+            <th>!MM [MMID]</th>
+            <th>[MMID] のマーダーミステリーの戦歴を確認できます</th>
+            <th>[MMID] : マイクラのID</th>
+        </tr>
+        <tr>
+            <th colspan="3">
+                <p style="color: #FF0505;">管理者限定コマンド
+            </th>
+        </tr>
+        <tr>
+            <th>!block [Mem]</th>
+            <th>[Mem] をブロックする</th>
+            <th rowspan="3">[Mem] : ユーザーメンション、ユーザーIDに対応</th>
+        </tr>
+        <tr>
+            <th>!unblock [Mem]</th>
+            <th>[Mem] をブロック解除する</th>
+        </tr>
+        <tr>
+            <th>!blocklist [Mem]</th>
+            <th>ブロックリストを表示 (ユーザーID)</th>
+        </tr>
+    </table>
 
 
-        <br style="line-height: 100px;">
-        <hr>
-        <p id="about" style="color:rgb(0, 234, 255);">About</p>
-        <table border="1">
-            <tr>
-                <th>にゃーの作成</th>
-                <th rowspan="2">ぜぎりあ (あやけい)</th>
-            </tr>
-            <tr>
-                <th>サイト作成</th>
-            </tr>
-            <tr>
-                <th>作成環境</th>
-                <th rowspan="2">Android 10 & Windows 10</th>
-            </tr>
-            <tr>
-                <th>デバック環境</th>
-            </tr>
-            <tr>
-                <th>使用モジュール</th>
-                <th>Nextcord.py</th>
-            </tr>
-            <tr>
-                <th>作成期間</th>
-                <th>約6ヶ月</th>
-            </tr>
-            <tr>
-                <th>世代</th>
-                <th>3世代目 (1ヶ月前)</th>
-            </tr>
-
-        </table>
+    <br style="line-height: 100px;">
+    <hr>
+    <p id="about" style="color:rgb(0, 234, 255);">About</p>
+    <table border="1">
+        <tr>
+            <th>にゃーの作成</th>
+            <th rowspan="2">ぜぎりあ (あやけい)</th>
+        </tr>
+        <tr>
+            <th>サイト作成</th>
+        </tr>
+        <tr>
+            <th>作成環境</th>
+            <th rowspan="2">Android 10<br>Windows 10</th>
+        </tr>
+        <tr>
+            <th>環境</th>
+        </tr>
+        <tr>
+            <th>Discordモジュール</th>
+            <th>Nextcord.py</th>
+        </tr>
+        <tr>
+            <th>期間</th>
+            <th>約6ヶ月</th>
+        </tr>
+        <tr>
+            <th>世代</th>
+            <th>3世代目 (約1ヶ月前)</th>
+        </tr>
+    </table>
