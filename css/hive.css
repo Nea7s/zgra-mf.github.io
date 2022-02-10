@@ -1,0 +1,41 @@
+/* 全体 */
+
+h1 {
+    color: turquoise;
+}
+
+input {
+    width: auto;
+    height: 50px;
+    font-size: large;
+}
+
+
+p {
+    font-family:serif;
+    font-size: 80%;
+}
+
+
+/* 結果 */
+.result details {
+    background-color: aliceblue;
+    display: inline-block;
+    margin: auto;
+    padding: 1%;
+}
+
+
+/* リスト装飾 */
+
+summary {
+    list-style: none;
+}
+
+details summary::before {
+    content: '[+] ';
+}
+
+details[open] summary::before {
+    content: '[-] ';
+}

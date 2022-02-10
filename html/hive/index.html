@@ -1,0 +1,40 @@
+<head>
+    <meta charset="utf-8">
+    <title>The Hive Statistics Home</title>
+    <link rel="stylesheet" href="/css/hive.css">
+</head>
+
+<h1>The Hive 統計データ確認</h1>
+<form name="form" method="get">
+    <input type="text" name="mmid" placeholder="マイクラ ID">
+    <input type="submit" value="取得">
+    <!--エラー出力-->
+    <span id="error"></span>
+    <hr>
+</form>
+
+
+<!--結果出力部分-->
+<!--MM-->
+<div class="result">
+    <details id="mm_">
+        <summary>Murder Mystery</summary>
+        <p>UUID : <span id="UUID">00000000-0000-0000-0000-000000000000</span></p>
+        <p>初プレイ日 : <span id="first_played">2000/00/00 00:00:00</span></p>
+        <br>
+        <p>レベル : <span id="LV">0</span></p>
+        <p>次のレベルまで <span id="NXP">0</span>XP必要</p>
+        <br>
+        <p>経験値 : <span id="xp">0</span></p>
+        <p>プレイ回数 : <span id="played">0</span></p>
+        <p>勝利数 : <span id="victories">0</span></p>
+        <p>コイン数 : <span id="coins">0</span></p>
+        <p>殺人数 : <span id="murders">0</span></p>
+        <p>死亡数 : <span id="deaths">0</span></p>
+        <p>退治数 : <span id="murderer_eliminations">0</span></p>
+        <br>
+        <p>uncapped_xp : <span id="uncapped_xp">0</span></p>
+    </details>
+</div>
+
+<script src="/js/hive.js"></script>

@@ -1,19 +1,22 @@
+//APIのヘッダー
+const hive_header = {
+    "accept": "*/*",
+    "x-csrf-token": ""
+}
+
+
+
 //ロード時
 window.onload = function () {
     let params = (new URL(document.location)).searchParams;
-    let MMID = params.get('MMID');
-    if (MMID) {
-        Api_get(MMID);
-        form.MMID.value = MMID;
+    let mmid = params.get('mmid');
+    if (mmid) {
+        api_get(mmid);
+        form.mmid.value = mmid;
     }
 }
 
 
-//APIのヘッダー
-const hives = {
-    "accept": "*/*",
-    "x-csrf-token": ""
-}
 
 
 //結果を代入
@@ -43,16 +46,14 @@ function formats(dts) {
 
 
 //GetAPI
-function Api_get(MMID) {
-    fetch("https://api.playhive.com/v0/game/all/murder/"+MMID, headers=hives)
+function api_get(mmid) {
+    fetch(`https://api.playhive.com/v0/game/all/murder/${mmid}`, headers = hive_header)
         .then(response => response.json()).then(texts => Set_value(texts))
         .catch(error => {
-            if (error == "SyntaxError: Unexpected token < in JSON at position 0") {
-                iserror(MMID);
-            }
+            const error_ = document.getElementById("error");
+            error_.innerText = "ユーザーが存在しません";
         });
 }
-
 
 //レベル計算
 function Set_LV(xps) {
@@ -72,13 +73,4 @@ function Set_LV(xps) {
             break;
         }
     }
-}
-
-//エラー書き込み
-function iserror (MMID){
-    const result = document.getElementById("result");
-    const li = document.createElement("div");
-    li.className = "error";
-    li.innerHTML = '<p>エラーが発生したよ!<br>アカウントが存在しない可能性があります<br><span style="color: red;">マイクラID : '+MMID+'</p>';
-    result.appendChild(li);
 }

@@ -1,0 +1,38 @@
+<head>
+    <title>TwBList</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/css/twblist.css">
+</head>
+
+
+<h1 style="text-align: center;">TwBList</h1>
+<h3 style="text-align: center;">ツイートを簡易にまとめます</h3>
+
+
+
+<!--本体-->
+<div class="main_">
+
+    <!--右半分-->
+    <div class="lay0 right_">
+
+        <!--ファイル選択-->
+        <label>
+            <input name="file" type="file" onchange="input_event(event)" accept="text/plain"><span>txt
+                を選択<br>ドラッグ&ドロップ</span>
+        </label>
+        <form style="display: flex;">
+            <p>ファイル名</p><input type="text" id="filename_" value="">
+        </form>
+        <button class="btn" onclick="onbutton()"><p>ダウンロード (html)</p></button>
+
+    </div>
+
+    <!--左半分-->
+    <div class="lay0 left">
+        <iframe id="frames" src="./frame.html"></iframe>
+    </div>
+</div>
+
+<!--最後に読み込む-->
+<script src="/js/twblist.js"></script>

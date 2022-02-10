@@ -1,0 +1,46 @@
+/* 上メニュー */
+.gnav {
+    background: darkkhaki;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+
+.menu {
+    display: flex;
+}
+
+.gnav li {
+    list-style: none;
+    margin-left: 35px;
+}
+
+/* ボタン作成 */
+.btn {
+    background: #ffb8b8;
+    border-radius: 28px;
+    color: #000000;
+    padding: 10px 20px 10px 20px;
+  }
+
+
+/* 全体 */
+p {
+    font-size: 120%;
+    color: rgb(209, 255, 240);
+}
+
+table {
+    background-color: white;
+}
+
+body {
+    text-align: center;
+    background-color: rgb(99, 140, 216);
+}
+
+img {
+    display: block;
+    margin: auto;
+}

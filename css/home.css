@@ -1,0 +1,47 @@
+body {
+    background-color: #f0f8ff;
+}
+
+
+h1 {
+    color: turquoise;
+}
+
+hr {
+    border-top: 1px solid #ccc;
+    margin: 10px;
+}
+
+span {
+    color: royalblue;
+}
+
+p {
+    margin: auto;
+}
+
+
+/* 機能一覧 */
+.tool_list>a {
+    display: inline-block;
+    width: 150;
+    margin: 2px;
+}
+
+.tool_list>a::before {
+    content: "";
+    display: block;
+    height: 150px;
+    background: var(--col, #0000) no-repeat center/cover var(--img, url(/img/no-data.png));
+}
+
+
+/* twitter等 */
+.sns_list {
+    display: flex;
+}
+
+.sns_list a::before {
+    content: var(--img, url("/img/no-data.png"));
+    height: 150px;
+}
