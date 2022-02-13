@@ -1,5 +1,5 @@
 <head>
-    <title>文字検索</title>
+    <title>画像検索</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./search.css">
 </head>
@@ -7,7 +7,7 @@
 <!--メニューとにゃーの-->
 <nav id="gnav">
     <ul class="inner">
-        <li><a href="./search.html">画像検索</a></li>
+        <li><a href="./">文字検索</a></li>
     </ul>
 </nav>
 <br>
@@ -17,18 +17,17 @@
 <br>
 
 <!--検索開始-->
-<form class="search_ui" onsubmit="search_send(); return false;">
-    <!--検索タイプ指定-->
+<!--検索タイプ指定-->
+<!--検索開始-->
+<form class="search_ui" onsubmit="image_send(); return false;">
     <select id="search_type">
-        <option value="google">Google</option>
-        <option value="youtube">Youtube</option>
-        <option value="yandex">Yandex</option>
-        <option value="torrends">torrent</option>
+        <option value="2">二次元画像詳細検索</option>
+        <option value="yandex">Yandex画像検索</option>
     </select>
     <!--検索box-->
+    <!--ファイル選択-->
     <input type="text" id="q" value="">
     <input type="submit" value="検索" class="btn">
-</div>
-<p id="result_text"></p>
+</form>
 
 <script src="./search.js"></script>

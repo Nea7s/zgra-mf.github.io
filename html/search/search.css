@@ -1,0 +1,78 @@
+/* メニュー部分*/
+#gnav {
+    background-color: rgb(204, 204, 204);
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+}
+
+.inner {
+    display: flex;
+}
+
+#gnav li {
+    list-style: none;
+    margin-left: 35px;
+}
+
+/* 画像レイアウト */
+.img_ui {
+    text-align: center;
+}
+
+img {
+    height: 50%;
+}
+
+
+/* 検索レイアウト */
+.search_ui {
+    display: flex;
+    justify-content: center;
+}
+select {
+    font-size: large;
+}
+
+input[type="text"] {
+    font-size: large;
+}
+
+
+/* ファイル域 装飾 */
+label {
+    display: table;
+    text-align: center;
+    width: 99%;
+    height: 120px;
+    color: #ffffff;
+    background-color: #a1b9ff;
+    cursor: pointer;
+}
+
+label span {
+    font-size: 150%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* アップロード域 ファイル非表示 */
+input[type="file"] {
+    display: none;
+}
+
+/*　帆単レイアウト */
+
+.btn {
+    background: #ff0000;
+    background-image: -webkit-linear-gradient(top, #ff0000, #ff0000);
+    background-image: -moz-linear-gradient(top, #ff0000, #ff0000);
+    background-image: -ms-linear-gradient(top, #ff0000, #ff0000);
+    background-image: -o-linear-gradient(top, #ff0000, #ff0000);
+    background-image: linear-gradient(to bottom, #ff0000, #ff0000);
+    color: #ffffff;
+    background: #3498db;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
