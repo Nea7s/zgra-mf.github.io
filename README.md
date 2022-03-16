@@ -1,3 +1,3 @@
-# szcjp.github.io
+# zgra-mf.github.io
 
-https://szcjp.github.io/
+https://zgra-mf.github.io/
