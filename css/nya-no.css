@@ -33,6 +33,7 @@ p {
 
 table {
     background-color: white;
+    margin: auto;
 }
 
 body {
@@ -43,4 +44,13 @@ body {
 img {
     display: block;
     margin: auto;
+}
+
+details {
+    background-color: rgb(1, 114, 212);
+    color: white;
+    display: inline-block;
+    margin: auto;
+    padding: 1%;
+    line-height: 40px;
 }
