@@ -1,3 +1,3 @@
-# Nea7s.github.io
+# zgraPTR.github.io
 
-https://Nea7s.github.io/
+https://zgraPTR.github.io/
