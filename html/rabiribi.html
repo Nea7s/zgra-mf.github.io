@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Rabi-Ribi Save View</title>
+    <script src="/js/rabi.js"></script>
+    <link rel="stylesheet" href="/css/rabi.css">
+</head>
+
+<h2 style="color: red;">※ 制作途中です。</h2>
+<h1>らびりび セーブデータビューワー</h1>
+<input type="file" id="file_" accept=".sav" onchange="ReadFile()">
+<p id="error_text" style="color:red;"></p>
+
+
+<div id="result" style="display:none;">
+    <details>
+        <summary>データ情報</summary>
+        <span id="total_playtime"></span><br>
+        <span id="total_runtime"></span><br>
+        <span id="playtime"></span><br>
+        <span id="difficulty"></span><br>
+        <span id="speedrun"></span><br>
+        <span id="hp"></span><br>
+        <span id="en"></span><br>
+    </details>
+    <br>
+    <details>
+        <summary>座標</summary>
+        <span id="x"></span><br>
+        <span id="y"></span>
+    </details>
+    <br>
+    <details>
+        <summary>消費アイテム</summary>
+        <span id="rumi_donuts"></span><br>
+        <span id="rumi_cakes"></span><br>
+        <span id="gold_carrot"></span><br>
+        <span id="cocoa_bombs"></span>
+    </details>
+</div>

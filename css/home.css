@@ -39,6 +39,7 @@ p {
 /* twitter等 */
 .sns_list {
     display: flex;
+    gap: 1%;
 }
 
 .sns_list a::before {

@@ -9,7 +9,7 @@ const hive_header = {
 //ロード時
 window.onload = function () {
     let params = (new URL(document.location)).searchParams;
-    let mmid = params.get('mmid');
+    let mmid = params.get('mcid');
     if (mmid) {
         api_get(mmid);
         form.mmid.value = mmid;

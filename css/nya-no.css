@@ -16,14 +16,6 @@
     margin-left: 35px;
 }
 
-/* ボタン作成 */
-.btn {
-    background: #ffb8b8;
-    border-radius: 28px;
-    color: #000000;
-    padding: 10px 20px 10px 20px;
-  }
-
 
 /* 全体 */
 p {
@@ -38,7 +30,7 @@ table {
 
 body {
     text-align: center;
-    background-color: rgb(99, 140, 216);
+    background-color: rgb(174, 202, 253);
 }
 
 img {
