@@ -1,3 +1,3 @@
-# zgra-mf.github.io
+# zgraPTR.github.io
 
-https://zgra-mf.github.io/
+https://zgraPTR.github.io/
