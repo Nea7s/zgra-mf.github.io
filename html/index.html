@@ -1,22 +1,31 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-    <meta charset="utf-8">
-    <title>Home</title>
+    <title>ホーム</title>
+    <link rel="stylesheet" href="/css/index.css">
 </head>
 
-<link rel="stylesheet" href="/css/home.css">
-<h1>ツール</h1>
-<hr>
-<!--ツール系-->
-<div class="tool_list">
-    <a href="./hive/index.html" style="--img:url(/img/hive.jpg);">The Hive API</a>
-    <a href="./B1.html" style="--img:url(/img/b1.jpg);">文字コード変換</a>
-    <a href="./nya-no.html" style="--img:url(/img/nya-no.png);">にゃーの</a>
-    <a href="./rabiribi.html" style="--img:url(/img/no-data.png);">らびりびセーブデータビューワー</a>
-</div>
-<!--sns等-->
-<br style="line-height: 50px;"><hr>
-<h2>SNS</h1>
-<div class="sns_list">
-    <a href="https://twitter.com/zgraPTR" style="--img:url(https://icongr.am/material/twitter.svg);">Twitter</a>
-    <a href="https://github.com/zgraPTR" style="--img:url(https://icongr.am/devicon/github-original.svg);">Github</a>
-</div>
+<body>
+    <h1 class="heading">ぜぎりあのホームページ</h1>
+    <div class="container">
+        <div class="item" onclick="location.href='./rabiribi.html';">
+            <img src="/img/no-data.png" alt="画像1">
+            <h3>らびりびセーブデータ閲覧</h3>
+        </div>
+        <div class="item" onclick="location.href='./B1.html';">
+            <img src="/img/b1.jpg" alt="画像1">
+            <h3>コード変換</h3>
+        </div>
+        <div class="item" onclick="location.href='./hive/';">
+            <img src="/img/hive.jpg" alt="画像2">
+            <h3>The Hive 統計情報</h3>
+        </div>
+        <div class="item" onclick="location.href='./nya-no.html';">
+            <img src="/img/nya-no.png" alt="画像3">
+            <h3>にゃーの</h3>
+        </div>
+    </div>
+</body>
+
+</html>

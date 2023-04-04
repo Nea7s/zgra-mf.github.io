@@ -1,69 +1,26 @@
-//APIのヘッダー
 const hive_header = {
-    "accept": "*/*",
-    "x-csrf-token": ""
-}
+    accept: "*/*",
+    "x-csrf-token": "",
+};
 
+const formats = (dts) => {
+    const dt = new Date(dts * 1000);
+    const y = dt.getFullYear();
+    const m = (`00${dt.getMonth() + 1}`).slice(-2);
+    const d = (`00${dt.getDate()}`).slice(-2);
+    const h = (`00${dt.getHours()}`).slice(-2);
+    const mu = (`00${dt.getMinutes()}`).slice(-2);
+    const s = (`00${dt.getSeconds()}`).slice(-2);
+    return `${y}/${m}/${d} ${h}:${mu}:${s}`;
+};
 
-
-//ロード時
-window.onload = function () {
-    let params = (new URL(document.location)).searchParams;
-    let mmid = params.get('mcid');
-    if (mmid) {
-        api_get(mmid);
-        form.mmid.value = mmid;
-    }
-}
-
-
-
-
-//結果を代入
-function Set_value(MM_json) {
-    //初プレイ計算
-    let times = formats(MM_json["first_played"]);
-    document.getElementById("first_played").textContent = times;
-    delete MM_json.first_played;
-    Set_LV(MM_json["xp"]);
-    for (let i in MM_json) {
-        document.getElementById(i).textContent = MM_json[i];
-    }
-}
-
-
-//時間整形
-function formats(dts) {
-    let dt = new Date(dts * 1000);
-    let y = dt.getFullYear();
-    let m = ('00' + (dt.getMonth() + 1)).slice(-2);
-    let d = ('00' + dt.getDate()).slice(-2);
-    let h = ('00' + dt.getHours()).slice(-2);
-    let mu = ('00' + dt.getMinutes()).slice(-2);
-    let s = ('00' + dt.getSeconds()).slice(-2);
-    return y + '/' + m + '/' + d + ' ' + h + ":" + mu + ":" + s;
-}
-
-
-//GetAPI
-function api_get(mmid) {
-    fetch(`https://api.playhive.com/v0/game/all/murder/${mmid}`, headers = hive_header)
-        .then(response => response.json()).then(texts => Set_value(texts))
-        .catch(error => {
-            const error_ = document.getElementById("error");
-            error_.innerText = "ユーザーが存在しません";
-        });
-}
-
-//レベル計算
-function Set_LV(xps) {
+const setLV = (xps) => {
     let xp1 = xp2 = 0;
     for (let i = 1; i < 101; i++) {
         if (i <= 81) {
             xp1 += (i - 1) * 100;
             xp2 += i * 100;
-        }
-        else {
+        } else {
             xp1 += 8100;
             xp2 = xp1 + 8100;
         }
@@ -73,4 +30,35 @@ function Set_LV(xps) {
             break;
         }
     }
-}
+};
+
+const setValues = (response) => {
+    const times = formats(response["first_played"]);
+    document.getElementById("first_played").textContent = times;
+    delete response.first_played;
+    setLV(response["xp"]);
+    for (const [key, value] of Object.entries(response)) {
+        console.log(key);
+        document.getElementById(key).textContent = value;
+    }
+};
+
+const apiGet = (mmid) => {
+    fetch(`https://api.playhive.com/v0/game/all/murder/${mmid}`, {
+        headers: hive_header,
+    })
+        .then((response) => response.json())
+        .then((texts) => setValues(texts))
+        .catch((error) => {
+            alert(`取得エラー : ${error}`)
+        });
+};
+
+window.addEventListener("load", () => {
+    const params = new URLSearchParams(window.location.search);
+    const mcid = params.get("mcid");
+    if (mcid) {
+        form.mcid.value = mcid;
+        apiGet(mcid);
+    }
+});

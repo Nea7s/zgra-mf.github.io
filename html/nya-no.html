@@ -1,35 +1,89 @@
+<!DOCTYPE html>
+<html>
+
 <head>
-    <title>にゃーの 公式サイト</title>
-    <link rel="stylesheet" href="/css/nya-no.css">
+    <meta charset="UTF-8">
+    <title>にゃーの</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #7289DA;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+        }
+
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+        }
+
+        button {
+            background-color: #7289DA;
+            border: none;
+            border-radius: 5px;
+            color: #FFFFFF;
+            cursor: pointer;
+            display: block;
+            font-size: 18px;
+            margin: 20px auto;
+            padding: 10px 20px;
+        }
+
+        button:hover {
+            background-color: #677BC4;
+        }
+
+        table {
+            border-collapse: collapse;
+            margin: 0 auto;
+            width: 80%;
+        }
+
+        th,
+        td {
+            border: 1px solid #CCCCCC;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #7289DA;
+            color: #FFFFFF;
+        }
+    </style>
 </head>
 
-<script src="../js/nya-no.js"></script>
+<body>
+    <header>
+        <h1>にゃーの</h1>
+    </header>
+    <img src="/img/nya-no.png" alt="にゃーの">
+    <button onclick="location.href='https://is.gd/ED3ptY'">ギルドに追加</button>
+    <table>
+        <thead>
+            <tr>
+                <th>コマンド</th>
+                <th>説明</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>作成予定</td>
+                <td>作成予定</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
 
-
-<!--上メニュー-->
-<nav class="gnav">
-    <ul class="menu">
-        <li><a target="_blank"
-                href="https://discord.com/api/oauth2/authorize?client_id=766289629253992458&permissions=3394560&scope=bot">サーバーに追加</a>
-        </li>
-        <li><a href="#about">About</a></li>
-        <li><a href="index.html">ホームに戻る</a></li>
-    </ul>
-</nav>
-
-<!--真ん中-->
-<br style="line-height: 120px;">
-<img src="/img/nya-no.png">
-<h1 style="color: rgb(58, 59, 63);">にゃーの bot</h1>
-
-<hr>
-<p id="commands">コマンド一覧</p>
-
-<table border="1" id="cmd_table">
-    <tr>
-        <th>コマンド</th>
-        <th>説明</th>
-        <th>補足</th>
-    </tr>
-</table>
-<br>
+</html>
