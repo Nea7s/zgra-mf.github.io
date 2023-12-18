@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>プロセカ統計</title>
+    <link rel="stylesheet" href="/css/prsk.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <label for="userId">プロセカ ユーザーID : </label>
+        <input type="text" id="userId" pattern="\d+" required>
+
+        <label for="loginDays">累積ログイン日数：</label>
+        <input type="text" id="loginDays" pattern="\d+" required>
+
+        <button onclick="getResult()">結果を取得する</button>
+
+        <div id="result">
+            <p id="creationDate">アカウント作成日：</p>
+            <p id="elapsedDays">アカウント作成日からの経過日数：</p>
+            <p id="missedDays">未ログイン日数：</p>
+        </div>
+    </div>
+
+    <script src="/js/prsk.js"></script>
+</body>
+
+</html>
